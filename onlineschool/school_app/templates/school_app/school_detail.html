@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends "school_app/school_app_base.html"%}
+
+{%block body%}
+<div class="jumbotron">
+        <h2>School Details:</h2>
+        <p>Name: {{school_detail.name}}</p>
+        <p>Principal : {{school_detail.location}}</p>
+    <h3>Students :</h3>
+
+        <ol>
+            {% for student in school_detail.students.all%}
+            <li><p>{{student.name}}</p></li>
+            {%endfor%}
+        </ol>
+
+</div>
+
+
+{%endblock%}
