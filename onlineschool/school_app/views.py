@@ -3,7 +3,9 @@ from django.views.generic import TemplateView, View, ListView, DetailView
 from .models import School, Student
 
 from . import models
-# Create your views her
+
+class LoginView(TemplateView):
+    template_name = 'school_app/login.html'
 
 class IndexView(TemplateView):
     template_name = 'school_app/index.html'

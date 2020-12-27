@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{%extends "school_app/base.html"%}
+{% load crispy_forms_tags %}
+
+{%block body%}
+<form action="" method="post">
+    {%csrf_token%}
+    {{ form|crispy }}
+    <input class="btn btn-primary" type="submit" value="Login">
+</form>
+{%endblock%}
